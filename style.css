@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    background-color: #fff1dd;
+}
+
+.blob {
+    position: fixed;
+    width: 60%;
+    right: -15%;
+    top: -40%;
+    z-index: -1;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    padding: 24px;
+}
+
+.cabecalho-logo {
+    font-family: "Playwrite CU", cursive;
+    color: #2f2325;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.cabecalho-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.cabecalho-menu-item {
+    color: #2f2325;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudo-principal-escrito {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.conteudo-principal-escrito-titulo {
+    font-weight: 700;
+    font-size: 64px;
+    color: #2f2325;
+}
+
+.conteudo-principal-escrito-subtitulo {
+    font-weight: 700;
+    font-size: 24px;
+    color: #2f2325;
+}
+
+.conteudo-principal-escrito-botao {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    background-color: #ff9f0d;
+    transition: 0.2s;
+    width: 250px;
+    height: 60px;
+    border: none;
+    box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff1dd;
+    gap: 10px;
+}
+
+.conteudo-principal-escrito-botao:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.conteudo-principal-imagem {
+    height: 430px;
+    filter: drop-shadow(-30px 40px 20px #3f3f3f3a);
+}
+
+.conteudo-secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.conteudo-secundario-titulo {
+    font-weight: 700;
+    font-size: 26px;
+    color: #2f2325;
+    margin-bottom: 16px;
+}
+
+.conteudo-secundario-escrito {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.conteudo-secundario-paragrafo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 25px;
+    gap: 50px;
+    width: 100%;
+    color: #2f2325;
+}
+
+.conteudo-secundario-icone.material-symbols-outlined {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff9f0d;
+    border-radius: 100px;
+    width: 75px;
+    height: 75px;
+    padding: 20px;
+    box-shadow: 4px 5px 30px rgba(0, 0, 0, 0.16);
+}
