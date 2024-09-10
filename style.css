@@ -150,3 +150,7 @@ body {
     padding: 20px;
     box-shadow: 4px 5px 30px rgba(0, 0, 0, 0.16);
 }
+
+.conteudo-secundario-icone:hover{
+    scale: 1.1;
+}
