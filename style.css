@@ -153,4 +153,5 @@ body {
 
 .conteudo-secundario-icone:hover{
     scale: 1.1;
+    cursor: default;
 }
