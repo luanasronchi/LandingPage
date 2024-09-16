@@ -27,13 +27,13 @@
         <div>
             <section class="conteudo-principal">
                 <div class="conteudo-principal-escrito">
-                    <h1 class="conteudo-principal-escrito-titulo">
+                    <h1 class="titulo">
                         Sua comida favorita
                     </h1>
-                    <h2 class="conteudo-principal-escrito-subtitulo">
+                    <h2 class="subtitulo">
                         De forma acessível e barata!
                     </h2>
-                    <button class="conteudo-principal-escrito-botao">
+                    <button class="botao" onclick="window.location.href='#fazer-pedido'">
                         Fazer pedido
                         <span class="material-symbols-outlined">arrow_forward</span> <!-- Icone -->
                     </button>
@@ -57,6 +57,39 @@
                         Entrega rápida
                     </p>
                 </section>
+            </section>
+
+            <section class="conteudo-terciario">
+                <h1 id="fazer-pedido" class="titulo">Fazer pedido</h1>
+                <form class="formulario" action="">
+                    <section class="formulario-section">
+                        <input class="formulario-item" type="text" id="nome" name="nome" placeholder="Nome" required>
+                        <input class="formulario-item" type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
+                    </section>
+                    <section class="formulario-section">
+                        <input class="formulario-item" type="text" id="endereco" name="endereco" placeholder="Endereço" required>
+                        <select class="formulario-item" id="pagamento" name="pagamento" required>
+                            <option value="" disabled selected>Forma de pagamento</option>
+                            <option value="dinheiro">Dinheiro</option>
+                            <option value="credito">Cartão de Crédito</option>
+                            <option value="debito">Cartão de Débito</option>
+                            <option value="pix">PIX</option>
+                        </select>
+                    </section>
+                    <section class="formulario-section">
+                        <select class="formulario-item" name="produto" id="produto">
+                            <option value="" disabled selected>Selecione o pedido</option>
+                            <option value="salada">Salada Cesar</option>
+                            <option value="pizza">Pizza</option>
+                            <option value="hamburguer">Hamburguer</option>
+                            <option value="sushi">Sushi</option>
+                        </select>
+                        <input type="text" class="formulario-item" id="observacoes" name="observacoes" placeholder="Observações"></input>
+                    </section>
+                    
+                    <input class="botao" type="submit" value="Confirmar">
+                </form>
+
             </section>
         </div>
     </main>
