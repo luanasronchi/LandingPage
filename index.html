@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -77,14 +78,14 @@
                         </select>
                     </section>
                     <section class="formulario-section">
-                        <select class="formulario-item" name="produto" id="produto">
+                        <select class="formulario-item" id="produto" name="produto" required>
                             <option value="" disabled selected>Selecione o pedido</option>
                             <option value="salada">Salada Cesar</option>
                             <option value="pizza">Pizza</option>
                             <option value="hamburguer">Hamburguer</option>
                             <option value="sushi">Sushi</option>
                         </select>
-                        <input type="text" class="formulario-item" id="observacoes" name="observacoes" placeholder="Observações"></input>
+                        <input type="text" class="formulario-item" id="observacoes" name="observacoes" placeholder="Observações">
                     </section>
                     
                     <input class="botao" type="submit" value="Confirmar">
