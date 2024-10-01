@@ -13,6 +13,7 @@ body {
     background-color: #fff1dd;
     overflow-x: hidden;
     margin-bottom: 50px;
+    margin: 0;
 }
 
 .blob {
@@ -41,6 +42,7 @@ body {
 
 .cabecalho-menu {
     display: flex;
+    align-items: center;
     gap: 32px;
 }
 
@@ -93,7 +95,23 @@ body {
     gap: 10px;
 }
 
-.botao:hover {
+.botao-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #2f2325;
+    transition: 0.2s;
+    width: 100px;
+    height: 30px;
+    border: none;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    color: #ff9f0d;
+}
+
+.botao:hover,
+.botao-login:hover {
     scale: 1.1;
     cursor: pointer;
 }
@@ -182,7 +200,7 @@ body {
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    gap: 30px;
+    gap: 20px;
 }
 
 .formulario-section {
@@ -194,19 +212,94 @@ body {
 }
 
 .formulario-item {
-    width: 50%;
-    height: 60px;
+    width: 60%;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     text-align: center;
-    background-color: #fff1dd;
+    background-color: transparent;
     border: 1px solid #2f23257b;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 25px;
     color: #2f2325;
 }
 
 .formulario-item::placeholder {
     color: #2f2325;
+}
+
+/* =================== */
+/*        Modal        */
+/* =================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+/* Estilo do conteúdo do painel */
+.modal-content {
+    background-color: white;
+    padding: 2%;
+    border-radius: 5px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-texto-secundario{
+    margin-top: 10px;
+}
+
+.modal-botao-secundario{
+    color: #ff9f0d;
+}
+
+/* =================== */
+/*      Cadastro       */
+/* =================== */
+
+.cadastro{
+    background-color: #fffcfc;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.conteudo-cadastro{
+    background-color: #fff1dd;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5%;
+    z-index: 10;
+}
+
+.formulario-texto{
+    color: #ff5963;
+    font-size: small;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.formulario-senha-conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }

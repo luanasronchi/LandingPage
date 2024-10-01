@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -20,23 +19,55 @@
             <a class="cabecalho-menu-item" href="#">Produtos</a>
             <a class="cabecalho-menu-item" href="#">Empresa</a>
             <a class="cabecalho-menu-item" href="#">Contato</a>
+            <button id="openModalBtn" class="cabecalho-menu-item botao-login" onclick="">
+                Login
+            </button>
         </nav>
     </header>
-
-    <main class="conteudo">
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <h2>Faça Login</h2>
+            <form class="formulario" action="">
+                <input class="formulario-item" type="text" id="email" name="email" placeholder="Email" required>
+                <input class="formulario-item" type="password" id="senha" name="senha" placeholder="Senha" required>
+                <input class="botao" type="submit" value="Entrar">
+            </form>
+            <p class="modal-texto-secundario">Não possui conta? <a class="modal-botao-secundario" href="#" id="openSignupModal">Cadastre-se</a></p>
+        </div>
+    </div>
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <h2>Cadastre-se</h2>
+            <form class="formulario" action="">
+                <input class="formulario-item" type="text" id="nome" name="nome" placeholder="Nome Completo" required>
+                <input class="formulario-item" type="email" id="signupEmail" name="signupEmail" placeholder="Email" required>
+                <input class="formulario-item" type="password" id="signupSenha" name="signupSenha" placeholder="Senha" required>
+                <input class="formulario-item" type="password" id="signupConfirmSenha" name="signupConfirmSenha" placeholder="Confirme a senha" required>
+                <div class="formulario-senha-conteudo">
+                    <section class="formulario-senha-required">
+                        <p id="senhaText1" class="formulario-texto"><span id="senhaCheck1" class="material-symbols-outlined">cancel</span>Deve conter 8 caracteres</p>
+                        <p id="senhaText2" class="formulario-texto"><span id="senhaCheck2" class="material-symbols-outlined">cancel</span>Deve conter 1 letra maiúscula</p>
+                        <p id="senhaText3" class="formulario-texto"><span id="senhaCheck3" class="material-symbols-outlined">cancel</span>Deve conter 1 caracter especial {@,#,$,&}</p>
+                        <p id="senhaText4" class="formulario-texto"><span id="senhaCheck4" class="material-symbols-outlined">cancel</span>As senhas devem ser iguais</p>
+                        
+                    </section>
+                </div>
+                <input class="botao" type="submit" value="Cadastrar">
+            </form>
+            <p class="modal-texto-secundario">Já possui conta? <a class="modal-botao-secundario" href="#" id="openLoginModal">Faça Login</a></p>
+        </div>
+    </div>
+    <main>
         <img class="blob" src="img/blob.png" />
         <div>
             <section class="conteudo-principal">
                 <div class="conteudo-principal-escrito">
-                    <h1 class="titulo">
-                        Sua comida favorita
-                    </h1>
-                    <h2 class="subtitulo">
-                        De forma acessível e barata!
-                    </h2>
+                    <h1 class="titulo">Sua comida favorita</h1>
+                    <h2 class="subtitulo">De forma acessível e barata!</h2>
                     <button class="botao" onclick="window.location.href='#fazer-pedido'">
                         Fazer pedido
-                        <span class="material-symbols-outlined">arrow_forward</span> <!-- Icone -->
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                        <!-- Icone -->
                     </button>
                 </div>
                 <img class="conteudo-principal-imagem" src="img/salada.png" />
@@ -46,21 +77,26 @@
                 <h3 class="conteudo-secundario-titulo">Nossas vantagens</h3>
                 <section class="conteudo-secundario-escrito">
                     <p class="conteudo-secundario-paragrafo">
-                        <span class="material-symbols-outlined conteudo-secundario-icone">trackpad_input</span> <!-- Icone -->
+                        <span class="material-symbols-outlined conteudo-secundario-icone">trackpad_input</span>
+                        <!-- Icone -->
                         Escolha o produto sem dificuldade
                     </p>
                     <p class="conteudo-secundario-paragrafo">
-                        <span class="material-symbols-outlined conteudo-secundario-icone">payments</span> <!-- Icone -->
+                        <span class="material-symbols-outlined conteudo-secundario-icone">payments</span>
+                        <!-- Icone -->
                         Realize o pagamento pela plataforma
                     </p>
                     <p class="conteudo-secundario-paragrafo">
-                        <span class="material-symbols-outlined conteudo-secundario-icone">local_shipping</span> <!-- Icone -->
+                        <span class="material-symbols-outlined conteudo-secundario-icone">local_shipping</span>
+                        <!-- Icone -->
                         Entrega rápida
                     </p>
                 </section>
             </section>
 
-            <section class="conteudo-terciario">
+            <!-- <section class="conteudo-terciario">
+
+                
                 <h1 id="fazer-pedido" class="titulo">Fazer pedido</h1>
                 <form class="formulario" action="">
                     <section class="formulario-section">
@@ -91,9 +127,11 @@
                     <input class="botao" type="submit" value="Confirmar">
                 </form>
 
-            </section>
+            </section> -->
         </div>
     </main>
 </body>
+
+<script src="script.js"></script>
 
 </html>
